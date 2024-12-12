@@ -1,98 +1,229 @@
-/* Header Section */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
     background-color: #333;
     color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 1rem 0;
 }
 
-nav ul li a:hover {
-    color: #f39c12; /* Add a hover effect to nav links */
-    border-bottom: 2px solid #f39c12;
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
-/* Skills Section */
-.skills ul {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+header h1, header p {
+    margin: 0;
     text-align: center;
 }
 
-.skills ul li {
-    background: #f7f7f7;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
 }
 
-.skills ul li:hover {
-    transform: scale(1.1);
-    background-color: #ffefdb;
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
 }
 
-/* Projects Section */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.about {
+    background-size: cover; /* Adjusts the background image size */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents background image from repeating */
+}
+.about-description {
+    color: #4c4b4b; /* Gray color example */
+}
+
+.about, .skills, .projects, .resume, .contact {
+    padding: 2rem 0;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 250px;
+    border-radius: 40%;
+    cursor: url("developerBG.jpg"), auto; 
+}
+
+.about-text {
+    max-width: 90%;
+    text-align: left; /* Align text to the right */
+    color:#333;
+}
+
+.about p {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    position: relative;
+    background-color:pink;
+}
+
+.skills-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.skills-background {
+    background: url('Skills BG.jpg') no-repeat center center/cover;
+    background-size: cover; /* Adjusts the background image size */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents background image from repeating */
+    flex: 1;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+}
+
+.skills-list {
+    flex: 1;
+    background-color: lightgray;
+    padding: 2rem;
+    margin-left: 50%;
+    border-radius: 0 10px 10px 0;
+}
+
+.skills-list h2 {
+    text-align: left;
+}
+
+.skills-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    border-color: gray;
+}
+
+.skills-list ul li {
+    background: #f4f4f4;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    
+}
+
+.skills-list ul li:hover {
+    background-color: pink;
+}
+
+.skills-list ul li i {
+    margin-right: 0.5rem;
+}
+s
+
+.project {
+    background-size: cover; /* Adjusts the background image size */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents background image from repeating */
+}
+
 .projects .project {
-    margin: 2rem 0;
     background: #f9f9f9;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 5px;
 }
 
-.projects .project:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+.projects .project h3 {
+    margin-top: 0;
 }
 
-.projects a {
+.resume {
+    margin-bottom: 2rem; /* Add margin below Resume section */
+}
+
+.resume .resume-download {
+    display: block;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 200px;
+    margin: 1rem auto;
+}
+
+.download-animation {
+    background-color: #f0f0f0; /* Light background color for contrast */
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 2rem; /* Add margin below Download section */
+}
+
+.download-animation a {
+    display: inline-block;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.download-animation a i {
+    margin-right: 0.5rem;
+    animation: bounce 2s infinite; /* Adjust animation duration and properties */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.contact p, .social-links {
+    text-align: center;
+}
+
+.social-links a {
+    margin: 0 1rem;
     text-decoration: none;
     color: #333;
 }
 
-.projects h3 {
-    margin: 0 0 1rem;
-    font-size: 1.5rem;
-}
-
-/* Footer */
 footer {
+    background: #333;
+    color: #fff;
     text-align: center;
     padding: 1rem 0;
-    background-color: #333;
-    color: #fff;
-    margin-top: 2rem;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-.profile-photo {
-    width: 250px; /* Sets the width of the photo */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 50%; /* Makes the photo circular */
-    object-fit: cover; /* Ensures the photo fills the area without distortion */
-    border: 4px solid #fff; /* Adds a white border around the photo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .skills ul {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
 }

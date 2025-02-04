@@ -7,169 +7,171 @@
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+    /* Skills Section Styling */
+    .skills {
+        background-color: #f9f9f9;
+        padding: 50px 0;
+    }
 
-        body {
-            background-color: #f4f4f9;
-            color: #333;
-        }
+    .skills-content {
+        text-align: center;
+    }
 
-        header {
-            background-color: #222;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
+    .skills-content h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        justify-content: center;
+    }
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+    .skill {
+        background-color: #ffffff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
 
-        nav ul li a:hover {
-            color: #1abc9c;
-        }
-
-        .container {
-            width: 85%;
-            margin: auto;
-        }
-
-        section {
-            padding: 60px 0;
-        }
-
-        .about, .projects, .resume, .contact {
-            background: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
-        }
-
-        .skill {
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .skill:hover {
-            transform: scale(1.05);
-            background-color: #1abc9c;
-            color: #fff;
-        }
-
-        .projects a {
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s;
-        }
-
-        .projects a:hover {
-            color: #1abc9c;
-        }
-
-        footer {
-            background-color: #222;
-            color: #fff;
-            text-align: center;
-            padding: 15px 0;
-        }
-    </style>
+    .skill i {
+        margin-right: 10px;
+        color: #007bff;
+    }
+</style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <h1>Hareesh Ediga</h1>
-        <p>Full Stack Software Developer | ReactJS | Spring Boot | AWS</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Hareesh Ediga</h1>
+            <p>Full Stack Software Developer</p>
+            <nav>
+                <ul>
+                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#skills"><i class="fas fa-laptop-code"></i> Skills</a></li>
+                    <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="about" class="about">
+    <!-- About Section -->
+    <section id="about" class="about" style="background-image: url('DVBG.jpg');">
         <div class="container">
-            <h2>About Me</h2>
-            <p>IT professional and engineering student skilled in software development, web technologies, full-stack development, and cloud computing. Experienced in ReactJS, Spring Boot, AWS, MySQL, API design, and blockchain integration.</p>
-        </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill">Java</div>
-                <div class="skill">Python</div>
-                <div class="skill">JavaScript</div>
-                <div class="skill">C</div>
-                <div class="skill">C++</div>
-                <div class="skill">HTML/CSS</div>
-                <div class="skill">ReactJS</div>
-                <div class="skill">Spring Boot</div>
-                <div class="skill">Django</div>
-                <div class="skill">RESTful APIs</div>
-                <div class="skill">AWS</div>
-                <div class="skill">MySQL</div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h1 style="text-decoration: underline;">About Me</h1>
+                    <p class="about-description">Hi all, I'm Hareesh Ediga, a passionate Full Stack Software Developer experienced in building Web and Mobile applications using JavaScript, ReactJS, NodeJS, React Native, and other modern frameworks.</p>
+                </div>
+                <img src="Hareesh PassPhoto.jpg" alt="Hareesh Ediga" class="profile-photo">
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects">
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+    <div class="container">
+        <div class="skills-content">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill"><i class="fab fa-java"></i> Java</div>
+                <div class="skill"><i class="fab fa-python"></i> Python</div>
+                <div class="skill"><i class="fab fa-js-square"></i> JavaScript</div>
+                <div class="skill"><i class="fas fa-code"></i> C</div>
+                <div class="skill"><i class="fas fa-code"></i> C++</div>
+                <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+                <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+                <div class="skill"><i class="fab fa-angular"></i> Angular.js</div>
+                <div class="skill"><i class="fab fa-react"></i> ReactJS</div>
+                <div class="skill"><i class="fas fa-leaf"></i> Spring Boot</div>
+                <div class="skill"><i class="fab fa-python"></i> Django</div>
+                <div class="skill"><i class="fas fa-cloud"></i> REST APIs</div>
+                <div class="skill"><i class="fas fa-database"></i> MySQL</div>
+                <div class="skill"><i class="fas fa-cloud"></i> AWS</div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Projects Section -->
+    <section id="projects" class="projects" style="background-image: url('project BG.jpg');">
         <div class="container">
             <h2>Projects</h2>
-            <p><strong>Pay Roll Management:</strong> Designed a system using React.js and Firebase for employee management.</p>
-            <p><strong>Automation Testing:</strong> Used Selenium and TestNG to streamline testing processes.</p>
-            <p><strong>Blockchain Credential Verification:</strong> Built a secure system for academic credentials with Java and MySQL.</p>
+            <div class="project">
+                <a href="https://github.com/Hareesh-Ediga/Pay_roll_management" target="_blank">
+                    <h3><i class="fas fa-business-time"></i> Pay Roll Management</h3>
+                </a>
+                <p>Managed payroll systems utilizing DBMS and SQL as part of a collaborative 5th-semester project.</p>
+            </div>
+            <div class="project">
+                <a href="https://github.com/Hareesh-Ediga/Food-order-and-managemet-" target="_blank">
+                    <h3><i class="fas fa-utensils"></i> Food Order And Management</h3>
+                </a>
+                <p>Developed a Circular LinkedList-based system to manage food orders, enhancing efficiency.</p>
+            </div>
+            <div class="project">
+                <a href="https://github.com/Hareesh-Ediga/Welcome-to-Tic-Tac-MyTicTacToe" target="_blank">
+                    <h3><i class="fas fa-gamepad"></i> MyTicTacToe</h3>
+                </a>
+                <p>Built a dynamic Tic-Tac-Toe game using HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="project">
+                <a href="https://github.com/Hareesh-Ediga/https---github.com-Hareesh-Ediga-Automation-Testing-For-Coursera-Website" target="_blank">
+                    <h3><i class="fas fa-robot"></i> Automation Testing For Coursera</h3>
+                </a>
+                <p>Automated login and course functionalities using Selenium and TestNG for streamlined testing.</p>
+            </div>
+            <div class="project">
+                <a href="https://github.com/Hareesh-Ediga/E-Commerce-Store---Toce-cart" target="_blank">
+                    <h3><i class="fas fa-shopping-cart"></i> ToceEcart</h3>
+                </a>
+                <p>Created an advanced e-commerce platform featuring search, filters, and secure payment integrations.</p>
+            </div>
         </div>
     </section>
 
+    <!-- Resume Section -->
     <section id="resume" class="resume">
         <div class="container">
             <h2>Resume</h2>
-            <a href="https://drive.google.com/file/d/18PAW7fKBUbN7u81VMDv2StKeq3yNx7fx/view?usp=drive_link" target="_blank">Download My Resume</a>
+            <p>Please download my resume to learn more about my experience and skills.</p>
+            <a href="https://drive.google.com/file/d/18PAW7fKBUbN7u81VMDv2StKeq3yNx7fx/view?usp=drive_link" target="_blank" class="download-link">
+                <i class="fas fa-file-download"></i> Download My Resume
+            </a>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:ehareesh07@gmail.com">ehareesh07@gmail.com</a></p>
-            <p>Phone: +91 88670 61307</p>
-            <p>Location: Bengaluru, India</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/hareesh-ediga" target="_blank">linkedin.com/in/hareesh-ediga</a></p>
-            <p>GitHub: <a href="https://github.com/Hareesh-Ediga" target="_blank">github.com/Hareesh-Ediga</a></p>
+            <p><a href="mailto:hareeshediga1208@gmail.com"><i class="fas fa-envelope"></i> hareeshediga1208@gmail.com</a></p>
+            <p><a href="tel:+918867061307"><i class="fas fa-phone"></i> +91 88670 61307</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/hareesh-ediga-0bb058244/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Hareesh-Ediga" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.codechef.com/users/hareeshediga07" target="_blank"><i class="fas fa-utensils"></i> CodeChef</a>
+                <a href="https://www.hackerrank.com/hareeshediga07" target="_blank"><i class="fab fa-hackerrank"></i> HackerRank</a>
+                <a href="https://www.naukri.com/code360/profile/3c57176f-7dea-4e54-b9b8-210015e4ef7d" target="_blank"><i class="fas fa-code"></i> Coding Ninja</a>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Hareesh Ediga. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Hareesh Ediga. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
